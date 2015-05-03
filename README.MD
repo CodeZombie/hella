@@ -24,7 +24,7 @@ At 1kb expanded, and less than 50 lines high, you can't get any smaller than thi
 
 If you want a non responsive column, add `non-responsive` to your column class.
 
-If you want an offset, add `six-offset` to your column class, where `six` is whatever you want between `one` and `eleven`
+If you want an offset, add `offset-six` to your column class, where `six` is whatever you want between `one` and `eleven`
 
 ##math
 If you want to change the width of the margin between columns, or the number of columns, there's a bit of math to it, but this'll help you out:
