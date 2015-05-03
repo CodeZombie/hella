@@ -1,0 +1,112 @@
+<!-- this good thing was written by Cazum (zombiearmy.net) in April, 2015. released under the WTFPL.-->
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="hella.css">
+		<link rel="stylesheet" type="text/css" href="hella-style.css">
+	</head>
+	<style>
+		body { padding: 3rem 0; }
+		.colored{ border-radius: 4px; background:#eaeaea; padding: .4rem 0; margin-bottom:1rem; text-align:center; }
+		.non-responsive { background-color:#f8eaea; }
+		.colored p:last-child { margin-bottom:0; }
+		h5 ~ h5{ margin-top:4rem; }
+	</style>
+	<body>
+		<div class="grid">
+			<h1>hella</h1>
+			<h5>is responsive:</h5>
+			<div class="row">
+				<div class="column twelve colored"><p>twelve</p></div>
+			</div>
+			<div class="row">
+				<div class="column colored"><p>one</p></div>
+				<div class="column eleven colored"><p>eleven</p></div>
+			</div>
+			<div class="row">
+				<div class="column two colored"><p>two</p></div>
+				<div class="column ten colored"><p>ten</p></div>
+			</div>
+			<div class="row">
+				<div class="column three colored"><p>three</p></div>
+				<div class="column nine colored"><p>nine</p></div>
+			</div>
+			<div class="row">
+				<div class="column four colored"><p>four</p></div>
+				<div class="column eight colored"><p>eight</p></div>
+			</div>
+			<div class="row">
+				<div class="column five colored"><p>five</p></div>
+				<div class="column seven colored"><p>seven</p></div>
+			</div>
+			<div class="row">
+				<div class="column six colored"><p>six</p></div>
+				<div class="column six colored"><p>six</p></div>
+			</div>
+			
+			<h5>supports offsets:</h5>
+			<div class="row">
+				<div class="column six offset-six colored"><p>six</p></div>
+			</div>
+			<div class="row">
+				<div class="column two colored"><p>two</p></div>
+				<div class="column six offset-four colored"><p>six</p></div>
+			</div>
+			
+			<h5>can be <span class="non-responsive">non-responsive</span>:</h5>
+			<div class="row">
+				<div class="column six non-responsive colored"><p>six</p></div>
+				<div class="column six non-responsive colored"><p>six</p></div>
+			</div>
+			<div class="row">
+				<div class="column six offset-six non-responsive colored"><p>six</p></div>
+			</div>
+			
+			<h5>can mix responsive with <span class="non-responsive">non-responsive</span>:</h5>
+			<div class="row">
+				<div class="column four colored"><p>four</p></div>
+				<div class="column four non-responsive colored"><p>four</p></div>
+				<div class="column four colored"><p>four</p></div>
+			</div>
+			
+			<h5>supports infinitely nested columns:</h5>
+			<div class="row">
+				<div class="column six colored"><p>six</p></div>
+				<div class="column six">
+					<div class="column six colored"><p>six</p></div>
+					<div class="column six">
+						<div class="column six colored"><p>six</p></div>
+						<div class="column six">
+							<div class="column six colored"><p>six</p></div>
+							<div class="column six">
+								<div class="column six colored"><p>six</p></div>
+								<div class="column six colored"><p>six</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<h5>and here's how to use it:</h5>			
+			<div class="row">
+				<div class="column twelve">
+<pre><code>&lt;div class="grid"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="column six"&gt;
+			hella.
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					<ul>
+						<li><code>grid</code> is the 960px column container. Every grid related thing goes in here.</li>
+						<li><code>row</code> is the horizontal container. Columns that need to sit next to other columns go in these. Has a maximum width of twelve.</li>
+						<li><code>column</code> is your column.</li>
+						<li><code>six</code> is the width of the column. Choose between two and twelve. You don't need to define a width if it's just one.</li>
+						<li><code>offset-six</code> applies a margin of six to the left of the column. Choose from one to eleven. <strong>Optional</strong>.</li>
+						<li><code>non-responsive</code> prevents the column from resizing or losing its offset on small screens. <strong>Optional</strong>.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
