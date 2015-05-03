@@ -3,6 +3,8 @@ A tiny, feature-rich responsive grid for desktop and mobile
 
 At 1kb expanded, and less than 50 lines high, you can't get any smaller than this. 
 
+####Check out the [demo page](http://codezombie.github.com/hella).
+
 ###features
  1. offsets
  2. allows columns to not respond to screen size
