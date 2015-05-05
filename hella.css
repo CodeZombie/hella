@@ -11,12 +11,13 @@
 	display:block;
 }
 .column{
-	width:6.5%;
+	width:100%;
 	float:left;
 	margin-right:2%;
 	box-sizing:border-box;
 }
 .column:last-child{ margin-right: 0; }
+.column.one{width:6.5%;}
 .column.two{width: 15%;} 
 .column.three{width: 23.5%;}
 .column.four{width: 32%;}
@@ -27,7 +28,6 @@
 .column.nine{width: 74.5%;}
 .column.ten{width:83%;}
 .column.eleven{width:91.5%}
-.column.twelve{width:100%;}
 .column.offset-one{margin-left:8.5%;}
 .column.offset-two{margin-left:17%;}
 .column.offset-three{margin-left:25.5%;} 
