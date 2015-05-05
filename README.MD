@@ -22,6 +22,8 @@ At 1kb expanded, and less than 50 lines high, you can't get any smaller than thi
 </div>
 ```
 
+You can choose a colum width between `one` and `twelve`, but the default value for column is `twelve`, so you never actually have to type it if you don't want to.
+
 If you want a non responsive column, add `non-responsive` to your column class.
 
 If you want an offset, add `offset-six` to your column class, where `six` is whatever you want between `one` and `eleven`
