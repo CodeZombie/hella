@@ -22,11 +22,11 @@ At 1kb expanded, and less than 50 lines high, you can't get any smaller than thi
 </div>
 ```
 
-You can choose a colum width between `one` and `twelve`, but the default value for column is `twelve`, so you never actually have to type it if you don't want to.
+You can choose a colum width between `one` and `twelve` (if no width is specified, the default is `twelve`).
 
 If you want a non responsive column, add `non-responsive` to your column class.
 
-If you want an offset, add `offset-six` to your column class, where `six` is whatever you want between `one` and `eleven`
+If you want an offset, add `offset-*` to your column class, where `*` is the offset width between `one` and `eleven`.
 
 ##math
 If you want to change the width of the margin between columns, or the number of columns, there's a bit of math to it, but this'll help you out:
