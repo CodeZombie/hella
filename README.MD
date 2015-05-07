@@ -8,8 +8,9 @@ At 1kb expanded, and less than 50 lines high, you can't get any smaller than thi
 ###features
  1. offsets
  2. allows columns to not respond to screen size
- 3. mixing non-responsive with resposnive elements works as expected
+ 3. mixing non-responsive with responsive elements works as expected
  4. infinite column nesting
+ 5. graceful support for browsers with no media query support
  
 ###How to use it
 ```
