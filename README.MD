@@ -1,7 +1,7 @@
 #hella
 A tiny, feature-rich responsive grid for desktop and mobile
 
-At 1kb expanded, and less than 50 lines high, you can't get any smaller than this. 
+At 1.25kb *un-minified*, and 50 lines high, you can't get any smaller than this. 
 
 ####Check out the [demo page](http://codezombie.github.com/hella).
 
