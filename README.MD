@@ -24,11 +24,9 @@ At 1.25kb *un-minified*, and 50 lines high, you can't get any smaller than this.
 </div>
 ```
 
-You can choose a colum width between `one` and `twelve` (if no width is specified, the default is `twelve`).
-
-If you want a non responsive column, add `non-responsive` to your column class.
-
-If you want an offset, add `offset-*` to your column class, where `*` is the offset width between `one` and `eleven`.
+ * You can choose a colum width between `one` and `twelve` (if no width is specified, the default is `twelve`).
+ * If you want a non responsive column, add `non-responsive` to your column class.
+ * If you want an offset, add `offset-*` to your column class, where `*` is the offset width between `one` and `eleven`.
 
 ##math
 If you want to change the width of the margin between columns, or the number of columns, there's a bit of math to it, but this'll help you out:
