@@ -1,43 +1,42 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+
 html {
 font-size: 62.5%;
-font-family: Georgia, serif;
 }
 
 body {
-margin:0;
-padding:0;
 font-size:1.6em;
 line-height:1.5;
+font-family: Georgia, serif;
 }
 
-h1, h2, h3, h4, h5, h6, p, pre, ul{
-margin: 0 0 2rem;
+h1, h2, h3, h4, h5, h6, p, pre code, ul, button, .button{
+margin-bottom: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
 font-family: Arial, Helvetica, sans-serif;	
 font-weight:300;
 }
+h1 { font-size: 5rem; }
+h2 { font-size: 4.5rem; }
+h3 { font-size: 4rem; }
+h4 { font-size: 3.5rem; }
+h5 { font-size: 3rem; }
+h6 { font-size: 2.5rem; }
 
-p  { line-height:2; margin-bottom:4rem;}
-h1 { font-size: 5.0rem; }
-h2 { font-size: 4.2rem; }
-h3 { font-size: 3.6rem; }
-h4 { font-size: 3.0rem; }
-h5 { font-size: 2.4rem; }
-h6 { font-size: 1.5rem; }
-
-pre code{
-display:block;
+p , ul{
+font-size:2rem;
+line-height:1.5; 
 }
 
-code {
-padding:.5rem;
-overflow:auto;
-background:#eaeaea;
-border-radius: 4px;
-font-family: monospace;
-}
 
 ul {
 padding-left:2rem;
@@ -47,4 +46,41 @@ li {
 line-height:2.5;
 list-style-type: circle;
 margin-left:0;
+}
+
+pre code{
+display:block;
+}
+
+code {
+vertical-align:baseline;
+padding:.5rem;
+overflow:auto;
+background:#ECEFF1;
+font-family: monospace;
+}
+
+a{
+	font-style:italic;
+	color:#2196F3;
+}
+
+.button, button{
+display:block;
+font-size:.75em;
+padding: 1.5rem 4rem;
+background:#CFD8DC;
+color:#444;
+font-style: italic;
+text-decoration:none;
+text-align:center;
+}
+.button:hover, button:hover{
+background:#B0BEC5;
+color:#fff;
+}
+
+.full-width {
+	width:100%;
+	box-sizing:border-box;
 }

@@ -1,112 +1,246 @@
 <!-- this good thing was written by Cazum (zombiearmy.net) in April, 2015. released under the WTFPL.-->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8">
+		<title>hella: The css grid</title>
 		<meta name="viewport" content="initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="hella.css">
 		<link rel="stylesheet" type="text/css" href="hella-style.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<style>
-		body { padding: 3rem 0; }
-		.colored{ border-radius: 4px; background:#eaeaea; padding: .4rem 0; margin-bottom:1rem; text-align:center; }
-		.non-responsive { background-color:#f8eaea; }
-		.colored p:last-child { margin-bottom:0; }
-		h5 ~ h5{ margin-top:4rem; }
-	</style>
-	<body>
-		<div class="grid">
+	<body onLoad="hideAll()">
+	<div class="grid">
+		<div class="header">
 			<h1>hella</h1>
-			<h5>is responsive:</h5>
+			<p>A super-tiny, feature-rich, legacy-supported, responsive css grid.<br/>Get it on <a href="https://github.com/CodeZombie/hella">github</a>.</p>
 			<div class="row">
-				<div class="column colored"><p>twelve</p></div>
+				<div class="column demo"></div>
 			</div>
 			<div class="row">
-				<div class="column one colored"><p>one</p></div>
-				<div class="column eleven colored"><p>eleven</p></div>
+				<div class="column one demo"></div>
+				<div class="column eleven demo"></div>
 			</div>
 			<div class="row">
-				<div class="column two colored"><p>two</p></div>
-				<div class="column ten colored"><p>ten</p></div>
+				<div class="column two demo"></div>
+				<div class="column ten demo"></div>
 			</div>
 			<div class="row">
-				<div class="column three colored"><p>three</p></div>
-				<div class="column nine colored"><p>nine</p></div>
+				<div class="column three demo"></div>
+				<div class="column nine demo"></div>
 			</div>
 			<div class="row">
-				<div class="column four colored"><p>four</p></div>
-				<div class="column eight colored"><p>eight</p></div>
+				<div class="column four demo"></div>
+				<div class="column eight demo"></div>
 			</div>
 			<div class="row">
-				<div class="column five colored"><p>five</p></div>
-				<div class="column seven colored"><p>seven</p></div>
+				<div class="column five demo"></div>
+				<div class="column seven demo"></div>
 			</div>
 			<div class="row">
-				<div class="column six colored"><p>six</p></div>
-				<div class="column six colored"><p>six</p></div>
+				<div class="column six demo"></div>
+				<div class="column six demo"></div>
 			</div>
+			<div class="row">
+				<div class="column four offset-eight">
+					<a href="javascript:toggle('cb1', 'b1')" class="button full-width" id="b1">show code...</a>
+				</div>
+			</div>
+<pre id="cb1"><code>&lt;div class="grid"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="column six"&gt;
+			hella
+		&lt;/div&gt;
+	&lt;/div&gt;	
+&lt;/div&gt;</code></pre>
+		</div>
+
+		<h4>column offsets</h4>
+		<div class="group">
+			<p>Offsets are great for when you need to position elements in a non-standard way.</p>
+			<div class="row">
+				<div class="column six offset-six demo"></div>
+			</div>
+			<div class="row">
+				<div class="column four offset-eight">
+					<a href="javascript:toggle('cb2', 'b2')" class="button full-width" id="b2">show code...</a>
+				</div>
+			</div>
+			<pre id="cb2"><code>&lt;div class="column six offset-six"&gt;&lt;/div&gt;</code></pre>
+		</div>
+		
+		<div class="group">
+			<p>Several popular css grid frameworks don't apply offsets properly when stacked beside eachother. Not hella.</p>		
+			<div class="row">
+				<div class="column two demo"></div>
+				<div class="column six offset-four demo"></div>
+			</div>
+			<div class="row">
+				<div class="column four offset-eight">
+					<a href="javascript:toggle('cb3', 'b3')" class="button full-width" id="b3">show code...</a>
+				</div>
+			</div>
+<pre id="cb3"><code>&lt;div class="row"&gt;
+	&lt;div class="column two"&gt;&lt;/div&gt;
+	&lt;div class="column six offset-four"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>	
+		</div>
+		
+		<div class="group">
+			<p>They're also great for centering columns.</p>
+			<div class="row">
+				<div class="column six offset-three demo"></div>
+			</div>
+			<div class="row">
+				<div class="column four offset-eight">
+					<a href="javascript:toggle('cb4', 'b4')" class="button full-width" id="b4">show code...</a>
+				</div>
+			</div>
+			<pre id="cb4"><code>&lt;div class="column six offset-three"&gt;&lt;/div&gt;</code></pre>
+		</div>
+
+		<h5>non-responsive</h5>
+		<div class="group">
+			<p>Columns with the <em>non-responsive</em> class will keep their relative size on small screens.</p>
+			<div class="row">
+				<div class="column six non-responsive demo"></div>
+				<div class="column six non-responsive demo"></div>
+			</div>
+			<div class="row">
+				<div class="column four offset-eight">
+					<a href="javascript:toggle('cb5', 'b5')" class="button full-width" id="b5">show code...</a>
+				</div>
+			</div>
+<pre id="cb5"><code>&lt;div class="row"&gt;
+	&lt;div class="column six non-responsive"&gt;&lt;/div&gt;
+	&lt;div class="column six non-responsive"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		</div>
 			
-			<h5>supports offsets:</h5>
+		<div class="group">
+			<p>Offsets will also be preserved</p>
 			<div class="row">
-				<div class="column six offset-six colored"><p>six</p></div>
+				<div class="column six offset-six non-responsive demo"></div>
 			</div>
 			<div class="row">
-				<div class="column two colored"><p>two</p></div>
-				<div class="column six offset-four colored"><p>six</p></div>
+				<div class="column four offset-eight">
+					<a href="javascript:toggle('cb6', 'b6')" class="button full-width" id="b6">show code...</a>
+				</div>
 			</div>
+<pre id="cb6"><code>&lt;div class="row"&gt;
+	&lt;div class="column six offset-six non-responsive"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		</div>
 			
-			<h5>can be <span class="non-responsive">non-responsive</span>:</h5>
+		<h5>mix responsive with non-responsive</h5>
+		<div class="group">
+			<p>Sometimes, you need to do weird stuff with your layout. That's fine. Hella can handle it.</p>
 			<div class="row">
-				<div class="column six non-responsive colored"><p>six</p></div>
-				<div class="column six non-responsive colored"><p>six</p></div>
+				<div class="column four demo"></div>
+				<div class="column four non-responsive demo"></div>
+				<div class="column four demo"></div>
 			</div>
 			<div class="row">
-				<div class="column six offset-six non-responsive colored"><p>six</p></div>
+				<div class="column four offset-eight">
+					<a href="javascript:toggle('cb7', 'b7')" class="button full-width" id="b7">show code...</a>
+				</div>
 			</div>
-			
-			<h5>can mix responsive with <span class="non-responsive">non-responsive</span>:</h5>
+<pre id="cb7"><code>&lt;div class="row"&gt;
+	&lt;div class="column four"&gt;&lt;/div&gt;
+	&lt;div class="column four non-responsive"&gt;&lt;/div&gt;
+	&lt;div class="column four"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		</div>
+	
+
+		<h5>infinitely nest columns</h5>
+		<div class="group">
+			<p>Nested columns will treat their parent container like a full width, and scale accordingly.</p>
 			<div class="row">
-				<div class="column four colored"><p>four</p></div>
-				<div class="column four non-responsive colored"><p>four</p></div>
-				<div class="column four colored"><p>four</p></div>
-			</div>
-			
-			<h5>supports infinitely nested columns:</h5>
-			<div class="row">
-				<div class="column six colored"><p>six</p></div>
+				<div class="column six demo"></div>
 				<div class="column six">
-					<div class="column six colored"><p>six</p></div>
+					<div class="column six demo"></div>
 					<div class="column six">
-						<div class="column six colored"><p>six</p></div>
+						<div class="column six demo"></div>
 						<div class="column six">
-							<div class="column six colored"><p>six</p></div>
+							<div class="column six demo"></div>
 							<div class="column six">
-								<div class="column six colored"><p>six</p></div>
-								<div class="column six colored"><p>six</p></div>
+								<div class="column six demo"></div>
+								<div class="column six demo"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			
-			<h5>and here's how to use it:</h5>			
 			<div class="row">
-				<div class="column">
-<pre><code>&lt;div class="grid"&gt;
-	&lt;div class="row"&gt;
-		&lt;div class="column six"&gt;
-			hella.
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-					<ul>
-						<li><code>grid</code> is the 960px column container. Every grid related thing goes in here.</li>
-						<li><code>row</code> is the horizontal container. Columns that need to sit next to other columns go in these. Has a maximum width of twelve.</li>
-						<li><code>column</code> is your column.</li>
-						<li><code>six</code> is the width of the column. Choose between one and twelve. Hella will assume twelve if no width is specified.</li>
-						<li><code>offset-six</code> applies a margin of six to the left of the column. Choose from one to eleven. <strong>Optional</strong>.</li>
-						<li><code>non-responsive</code> prevents the column from resizing or losing its offset on small screens. <strong>Optional</strong>.</li>
-					</ul>
+				<div class="column four offset-eight">
+					<a href="javascript:toggle('cb8', 'b8')" class="button full-width" id="b8">show code...</a>
 				</div>
 			</div>
+<pre id="cb8"><code>&lt;div class="column six"&gt;
+	&lt;div class="column six"&gt;
+		&lt;div class="column six"&gt;
+			//infinity
+		&lt;/div&gt;
+	&lt;/div&gt;	
+&lt;/div&gt;</code></pre>
 		</div>
+		
+		<h5>legacy support</h5>
+		<div class="group">
+			<p>Columns will always display at 100% width in browsers that don't support media queries.</p>
+			<p><code>non-responsive</code> and <code>offset</code> won't work on these browsers either.</p>
+			<div class="row">
+				<div class="column one demo"></div>
+				<div class="column two offset-two demo"></div>
+				<div class="column two offset-two demo"></div>
+				<div class="column one offset-two demo"></div>
+			</div>
+			<div class="row">
+				<div class="column two demo"></div>
+				<div class="column three offset-one demo"></div>
+				<div class="column three demo"></div>
+				<div class="column two offset-one demo"></div>
+			</div>
+			<div class="row">
+				<div class="column three demo"></div>
+				<div class="column two offset-one demo"></div>
+				<div class="column two demo"></div>
+				<div class="column three offset-one demo"></div>
+			</div>
+			<div class="row">
+				<div class="column three offset-one demo"></div>
+				<div class="column one offset-one demo"></div>
+				<div class="column one demo"></div>
+				<div class="column three offset-one demo"></div>
+			</div>
+			<div class="row">
+				<div class="column three offset-two demo"></div>
+				<div class="column three offset-two demo"></div>
+			</div>
+	</div>
 	</body>
+	<script>
+	function hideAll() {
+		document.getElementById("cb1").style.display = "none";
+		document.getElementById("cb2").style.display = "none";
+		document.getElementById("cb3").style.display = "none";
+		document.getElementById("cb4").style.display = "none";
+		document.getElementById("cb5").style.display = "none";
+		document.getElementById("cb6").style.display = "none";
+		document.getElementById("cb7").style.display = "none";
+		document.getElementById("cb8").style.display = "none";
+	}
+	
+	function toggle(x, y) {
+		if(document.getElementById(x).style.display == "none") {
+			document.getElementById(x).style.display = "block";
+			document.getElementById(y).innerHTML = "hide code...";
+		} else {
+			document.getElementById(x).style.display = "none";
+			document.getElementById(y).innerHTML = "show code...";		
+		}
+	}
+	
+	</script>
 </html>
