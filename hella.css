@@ -1,5 +1,5 @@
 .grid {
-	display:table;
+	overflow:auto;
 	width:100%;
 	padding: 0 32px;
 	max-width:960px;
