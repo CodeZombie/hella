@@ -13,7 +13,7 @@
 	<div class="grid">
 		<div class="header">
 			<h1>hella</h1>
-			<p>A super-tiny, feature-rich, legacy-supported, responsive css grid.<br/>Get it on <a href="https://github.com/CodeZombie/hella">github</a>.</p>
+			<p>A super-tiny, feature-rich, gracefully-degrading, responsive css grid.<br/>Get it on <a href="https://github.com/CodeZombie/hella">github</a>.</p>
 			<div class="row">
 				<div class="column demo"></div>
 			</div>
@@ -186,10 +186,10 @@
 &lt;/div&gt;</code></pre>
 		</div>
 		
-		<h5>legacy support</h5>
+		<h5>graceful degredation</h5>
 		<div class="group">
 			<p>Columns will always display at 100% width in browsers that don't support media queries.</p>
-			<p><code>non-responsive</code> and <code>offset</code> won't work on these browsers either.</p>
+			<p><code>non-responsive</code> and <code>offset</code> tags will be unavailable on these browsers as well.</p>
 			<div class="row">
 				<div class="column one demo"></div>
 				<div class="column two offset-two demo"></div>
