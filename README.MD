@@ -10,7 +10,7 @@ At 1.25kb *un-minified*, and 50 lines high, you can't get any smaller than this.
  2. optionally allow columns to be non-responsive
  3. mixing non-responsive with responsive elements works as expected
  4. infinite column nesting
- 5. graceful support for browsers with no media query support
+ 5. graceful-degrading support for browsers with no media query support
  6. supports responsive columns *outside* of the grid. Just ommit the `grid` div.
  
 ###How to use it
