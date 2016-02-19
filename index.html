@@ -131,7 +131,28 @@
 	&lt;div class="column six offset-six non-responsive"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 		</div>
-			
+		
+		<h5>hide columns on different screen sizes</h5>
+		<div class="group">
+			<p>Only displays on large screens:</p>
+			<div class="row">
+				<div class="column large-only demo"></div>
+			</div>
+			<p>Only displays on small screens:</p>
+			<div class="row">
+				<div class="column small-only demo"></div>
+			</div>
+			<div class="row">
+				<div class="column four offset-eight">
+					<a href="javascript:toggle('cb7', 'b7')" class="button full-width" id="b7">show code...</a>
+				</div>
+			</div>
+<pre id="cb7"><code>&lt;div class="row"&gt;
+	&lt;div class="column large-only"&gt;&lt;/div&gt;
+	&lt;div class="column small-only"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		</div>
+		
 		<h5>mix responsive with non-responsive</h5>
 		<div class="group">
 			<p>Sometimes, you need to do weird stuff with your layout. That's fine. Hella can handle it.</p>
