@@ -163,10 +163,10 @@
 			</div>
 			<div class="row">
 				<div class="column four offset-eight">
-					<a href="javascript:toggle('cb7', 'b7')" class="button full-width" id="b7">show code...</a>
+					<a href="javascript:toggle('cb8', 'b8')" class="button full-width" id="b8">show code...</a>
 				</div>
 			</div>
-<pre id="cb7"><code>&lt;div class="row"&gt;
+<pre id="cb8"><code>&lt;div class="row"&gt;
 	&lt;div class="column four"&gt;&lt;/div&gt;
 	&lt;div class="column four non-responsive"&gt;&lt;/div&gt;
 	&lt;div class="column four"&gt;&lt;/div&gt;
@@ -195,22 +195,45 @@
 			</div>
 			<div class="row">
 				<div class="column four offset-eight">
-					<a href="javascript:toggle('cb8', 'b8')" class="button full-width" id="b8">show code...</a>
+					<a href="javascript:toggle('cb9', 'b9')" class="button full-width" id="b9">show code...</a>
 				</div>
 			</div>
-<pre id="cb8"><code>&lt;div class="column six"&gt;
+<pre id="cb9"><code>&lt;div class="row"&gt;
 	&lt;div class="column six"&gt;
 		&lt;div class="column six"&gt;
-			//infinity
-		&lt;/div&gt;
-	&lt;/div&gt;	
+			&lt;div class="column six"&gt;
+				//infinity
+			&lt;/div&gt;
+		&lt;/div&gt;	
+	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 		</div>
+
+		<h5>remove column margins</h5>
+		<div class="group">
+			<p>Sometimes you need columns to butt right up against eachother. Alright.</p>
+			<p>Since hella applies margins to the right, you don't need to use the <code>no-margin</code> tag on the last column in the row. But you can if you still want to :^)</p>
+			<div class="row">
+				<div class="column four no-margin demo"></div>
+				<div class="column four no-margin demo altcolor"></div>
+				<div class="column four demo"></div>
+			</div>
+			<div class="row">
+				<div class="column four offset-eight">
+					<a href="javascript:toggle('cb10', 'b10')" class="button full-width" id="b10">show code...</a>
+				</div>
+			</div>
+<pre id="cb10"><code>&lt;div class="row"&gt;
+	&lt;div class="column four no-margin"&gt;&lt;/div&gt;
+	&lt;div class="column four no-margin"&gt;&lt;/div&gt;
+	&lt;div class="column four"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
 		
 		<h5>graceful degredation</h5>
 		<div class="group">
 			<p>Columns will always display at 100% width in browsers that don't support media queries.</p>
-			<p><code>non-responsive</code> and <code>offset</code> tags will be unavailable on these browsers as well.</p>
+			<p><code>non-responsive</code>, <code>offset</code>, <code>no-margin</code>, <code>large-only</code> and <code>small-only</code> tags will be unavailable on these browsers as well.</p>
 			<div class="row">
 				<div class="column one demo"></div>
 				<div class="column two offset-two demo"></div>
@@ -251,6 +274,8 @@
 		document.getElementById("cb6").style.display = "none";
 		document.getElementById("cb7").style.display = "none";
 		document.getElementById("cb8").style.display = "none";
+		document.getElementById("cb9").style.display = "none";
+		document.getElementById("cb10").style.display = "none";
 	}
 	
 	function toggle(x, y) {

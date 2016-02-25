@@ -20,6 +20,9 @@ margin-bottom:6rem;
 	margin-bottom: 2rem;
 	background: #fe5f55;
 }
+.column.demo.altcolor {
+	background:#56adfe;
+}
 
 .group {
 	padding:2rem 2rem 0 2rem;
