@@ -1,18 +1,19 @@
 #hella
 A tiny, feature-rich responsive grid for desktop and mobile
 
-At 1.36kb *un-minified*, and <60 lines high, you can't get any smaller than this. 
+At 1.9kb *un-minified*, and < 70 lines high, you can't get any smaller than this. 
 
 ####Check out the [demo page](http://codezombie.github.com/hella).
 
 ###features
  1. column offsets
  2. optionally allow columns to be non-responsive
- 3. mixing non-responsive with responsive elements works as expected
- 4. infinite column nesting
- 5. hide columns at breakpoints
- 6. graceful-degrading support for browsers with no media query support
- 7. supports responsive columns *outside* of the grid. Just ommit the `grid` div.
+ 3. optional column margins
+ 4. mixing non-responsive with responsive elements works as expected
+ 5. infinite column nesting
+ 6. hide columns at breakpoints
+ 7. graceful-degrading support for browsers with no media query support
+ 8. supports responsive columns *outside* of the grid. Just ommit the `grid` div.
  
 ###How to use it
 ```
@@ -29,6 +30,7 @@ At 1.36kb *un-minified*, and <60 lines high, you can't get any smaller than this
  * If you want a non responsive column, add `non-responsive` to your column class.
  * If you want to offset a column to the right, add `offset-*` to your column class, where `*` is the offset width between `one` and `eleven`.
  * If you want a column to only show on a certain screen size, add `large-only` or `small-only` to your column class.
+ * If you want to remove a margin between two columns, add `no-margin` to the leftmost column.
 
 ##math
 If you want to change the width of the margin between columns, or the number of columns, there's a bit of math to it, but this'll help you out:
