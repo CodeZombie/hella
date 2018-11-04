@@ -1,11 +1,13 @@
-#hella
+# hella
 A tiny, feature-rich responsive grid for desktop and mobile
 
 At 1.9kb *un-minified*, and < 70 lines high, you can't get any smaller than this. 
 
-####Check out the [demo page](http://codezombie.github.com/hella).
+![image](https://i.imgur.com/TBojBgG.png)
 
-###features
+#### Check out the [demo page](http://codezombie.github.com/hella).
+
+### features
  1. column offsets
  2. optionally allow columns to be non-responsive
  3. optional column margins
@@ -15,7 +17,7 @@ At 1.9kb *un-minified*, and < 70 lines high, you can't get any smaller than this
  7. graceful-degrading support for browsers with no media query support
  8. supports responsive columns *outside* of the grid. Just ommit the `grid` div.
  
-###How to use it
+### How to use it
 ```
 <div class="grid">
 	<div class="row">
