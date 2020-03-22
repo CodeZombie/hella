@@ -16,7 +16,7 @@ margin-bottom:6rem;
 }
 
 .column.demo{
-	height:6rem;
+	min-height:6rem;
 	margin-bottom: 2rem;
 	background: #fe5f55;
 }

@@ -13,7 +13,7 @@
 	<div class="grid">
 		<div class="header">
 			<h1>hella</h1>
-			<p>A super-tiny, feature-rich, gracefully-degrading, responsive css grid.<br/>Get it on <a href="https://github.com/CodeZombie/hella">github</a>.</p>
+			<p>A super-tiny, feature-rich, gracefully-degrading, responsive css grid.<br/>Works on all modern browser <i>and</i> Internet Explorer 11.<br/>Get it on <a href="https://github.com/CodeZombie/hella">github</a>.</p>
 			<div class="row">
 				<div class="column demo"></div>
 			</div>
@@ -52,6 +52,24 @@
 			hella
 		&lt;/div&gt;
 	&lt;/div&gt;	
+&lt;/div&gt;</code></pre>
+		</div>
+
+		<h4>fluid heights</h4>
+		<div class="group">
+			<p>Columns will always take the height of the tallest column in the row.</p>
+			<div class="row">
+				<div class="column three demo" style="height:12rem"></div>
+				<div class="column nine demo"></div>
+			</div>
+			<div class="row">
+				<div class="column four offset-eight">
+					<a href="javascript:toggle('cb2', 'b2')" class="button full-width" id="b2">show code...</a>
+				</div>
+			</div>
+			<pre id="cb2"><code>&lt;div class="row"&gt;
+	&lt;div class="column three" style="height:92px"&gt;&lt;/div&gt;
+	&lt;div class="column nine"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 		</div>
 
@@ -101,19 +119,19 @@
 
 		<h5>non-responsive</h5>
 		<div class="group">
-			<p>Columns with the <em>non-responsive</em> class will keep their relative size on small screens.</p>
-			<div class="row">
-				<div class="column six non-responsive demo"></div>
-				<div class="column six non-responsive demo"></div>
+			<p>Rows with the <em>non-responsive</em> class will not resize their content on small screens.</p>
+			<div class="row non-responsive">
+				<div class="column six  demo"></div>
+				<div class="column six demo"></div>
 			</div>
 			<div class="row">
 				<div class="column four offset-eight">
 					<a href="javascript:toggle('cb5', 'b5')" class="button full-width" id="b5">show code...</a>
 				</div>
 			</div>
-<pre id="cb5"><code>&lt;div class="row"&gt;
-	&lt;div class="column six non-responsive"&gt;&lt;/div&gt;
-	&lt;div class="column six non-responsive"&gt;&lt;/div&gt;
+<pre id="cb5"><code>&lt;div class="row non-responsive"&gt;
+	&lt;div class="column six"&gt;&lt;/div&gt;
+	&lt;div class="column six"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 		</div>
 			
@@ -152,42 +170,29 @@
 	&lt;div class="column small-only"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 		</div>
-		
-		<h5>mix responsive with non-responsive</h5>
-		<div class="group">
-			<p>Sometimes, you need to do weird stuff with your layout. That's fine. Hella can handle it.</p>
-			<div class="row">
-				<div class="column four demo"></div>
-				<div class="column four non-responsive demo"></div>
-				<div class="column four demo"></div>
-			</div>
-			<div class="row">
-				<div class="column four offset-eight">
-					<a href="javascript:toggle('cb8', 'b8')" class="button full-width" id="b8">show code...</a>
-				</div>
-			</div>
-<pre id="cb8"><code>&lt;div class="row"&gt;
-	&lt;div class="column four"&gt;&lt;/div&gt;
-	&lt;div class="column four non-responsive"&gt;&lt;/div&gt;
-	&lt;div class="column four"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-		</div>
 	
-
 		<h5>infinitely nest columns</h5>
 		<div class="group">
 			<p>Nested columns will treat their parent container like a full width, and scale accordingly.</p>
 			<div class="row">
 				<div class="column six demo"></div>
 				<div class="column six">
-					<div class="column six demo"></div>
-					<div class="column six">
+					<div class="row">
 						<div class="column six demo"></div>
 						<div class="column six">
-							<div class="column six demo"></div>
-							<div class="column six">
+							<div class="row">
 								<div class="column six demo"></div>
-								<div class="column six demo"></div>
+								<div class="column six">
+									<div class="row">
+										<div class="column six demo"></div>
+										<div class="column six">
+											<div class="row">
+												<div class="column six demo"></div>
+												<div class="column six demo"></div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -199,13 +204,17 @@
 				</div>
 			</div>
 <pre id="cb9"><code>&lt;div class="row"&gt;
-	&lt;div class="column six"&gt;
-		&lt;div class="column six"&gt;
-			&lt;div class="column six"&gt;
-				//infinity
-			&lt;/div&gt;
-		&lt;/div&gt;	
-	&lt;/div&gt;
+    &lt;div class="column six"&gt;&lt;/div&gt;
+    &lt;div class="column six"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="column six"&gt;&lt;/div&gt;
+            &lt;div class="column six"&gt;
+                &lt;div class="row"&gt;
+                    //infinity
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 		</div>
 
