@@ -1,7 +1,9 @@
 # hella
-A tiny, feature-rich responsive grid for desktop and mobile
+A tiny, feature-rich responsive grid for desktop and mobile.
 
-At 1.9kb *un-minified*, and < 70 lines high, you can't get any smaller than this. 
+Works on all modern browsers *and* Internet Explorer 11.
+
+At < 80 lines tall, you can't get any smaller than this. 
 
 ![image](https://i.imgur.com/TBojBgG.png)
 
@@ -9,13 +11,12 @@ At 1.9kb *un-minified*, and < 70 lines high, you can't get any smaller than this
 
 ### features
  1. column offsets
- 2. optionally allow columns to be non-responsive
- 3. optional column margins
- 4. mixing non-responsive with responsive elements works as expected
- 5. infinite column nesting
- 6. hide columns at breakpoints
+ 2. fluid column height
+ 3. rows can be non-responsive
+ 4. column margins can be toggled
+ 5. infinitely nest rows within rows
+ 6. hide columns on different screen sizes
  7. graceful-degrading support for browsers with no media query support
- 8. supports responsive columns *outside* of the grid. Just ommit the `grid` div.
  
 ### How to use it
 ```
@@ -29,12 +30,12 @@ At 1.9kb *un-minified*, and < 70 lines high, you can't get any smaller than this
 ```
 
  * You can choose a column width between `one` and `twelve` (if no width is specified, the default is `twelve`).
- * If you want a non responsive column, add `non-responsive` to your column class.
+ * If you want a non responsive row, add `non-responsive` to the row's class.
  * If you want to offset a column to the right, add `offset-*` to your column class, where `*` is the offset width between `one` and `eleven`.
  * If you want a column to only show on a certain screen size, add `large-only` or `small-only` to your column class.
  * If you want to remove a margin between two columns, add `no-margin` to the leftmost column.
 
-##math
+## math
 If you want to change the width of the margin between columns, or the number of columns, there's a bit of math to it, but this'll help you out:
 
  The verbose formula for calculating column width in percent, where `max columns` is the total number of columns, `column` is the current column who's width is being calculated, and `margin in percent` is the value of `.column{margin-right: %;}`, is:
