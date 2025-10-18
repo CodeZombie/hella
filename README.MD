@@ -7,7 +7,7 @@ At < 80 lines tall, you can't get any smaller than this.
 
 ![image](https://i.imgur.com/TBojBgG.png)
 
-#### Check out the [demo page](http://codezombie.github.com/hella).
+#### Check out the [demo page](https://codezombie.github.io/hella/).
 
 ### features
  1. column offsets
